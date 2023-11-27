@@ -110,6 +110,7 @@ body{
     cursor: pointer;
     border: 1px solid #C1C5CD;
     border-radius: 18px;
+    background-color: #FFF;
 }
 .hero__pointer:hover {
     border-radius: 18px;
@@ -118,8 +119,7 @@ body{
 .hero__main-posts {
     display: flex;
     align-items: stretch;
-    gap: 24px;    background-color: #FFF;
-
+    gap: 24px;
 }
 .hero__main-post-first,
 .hero__main-post-second  {
@@ -382,7 +382,4 @@ body{
     .footer__nav {
         gap: 30px;
     }
-    /* .footer__link {
-        white-space: nowrap;
-    } */
 }
