@@ -5,6 +5,9 @@ body{
     font-family: Montserrat;
     font-size: 14px;
 }
+.flex {
+    display: flex;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -23,6 +26,9 @@ body{
     margin-right: 51px;
     cursor: pointer;
 }
+.header__burger-menu {
+    display: none;
+}
 .header__nav{
     margin-right: 164px;
 }
@@ -34,8 +40,17 @@ body{
     color: black;
     text-decoration: none;
 }
+.header__link {
+    white-space: nowrap;
+
+}
 .header__link:hover{
     border-bottom: 1px solid rgba(0, 0, 0, 0.63);
+}
+.header__btn-expand-text {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 .btn{
     align-items: center;
@@ -88,6 +103,11 @@ body{
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
+}
+.hero__btn {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 .hero__btn-item {
     padding: 6px 8px;
@@ -235,12 +255,18 @@ body{
 .footer > p {
     color: #FFF;
 }
+.footer__container {
+    display: flex;
+    justify-content: center;
+    /* gap: 91px; */
+    padding-bottom: 24px;
+    width: 100%;
+    border-bottom: 1px solid rgba(157, 157, 157, 0.3) ;
+}
 .footer__nav {
     display: flex;
+    justify-content: space-between;
     gap: 93px;
-    padding-bottom: 24px;
-    /* width: 1200px; */
-    border-bottom: 1px solid rgba(157, 157, 157, 0.3) ;
 }
 .footer__list {
     display: flex;
@@ -299,8 +325,6 @@ body{
     line-height: 18px;
     letter-spacing: 0.25px;
 }
-.footer__skolkovo {
-}
 .footer__social {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -334,6 +358,8 @@ body{
 }
 .footer__other {
     display: flex;
+    align-self: ;
+    justify-self: ;
     gap: 48px;
     margin-top: 17px;
     color: rgba(255, 255, 255, 0.700);
@@ -341,7 +367,7 @@ body{
     font-weight: 400;
     line-height: 20px;
 }
-.footer__douments:hover {
+.footer__documents:hover {
     color: rgba(255, 255, 255);
 }
 .footer__pay:hover {
@@ -354,9 +380,9 @@ body{
     top: 350px;
     width: 100%;
 }
-@media (max-width: 1210px) {
+@media screen and (max-width: 1210px) {
     .container {
-        max-width: 960px;
+        width: 960px;
     }
     .header{
         border-bottom: 1px solid #EFF5FB;
@@ -379,7 +405,115 @@ body{
         justify-content: space-evenly;
         padding: 40px 26px 17px 38px;
     }
+    .footer__container {
+        gap: 21px;
+    }
     .footer__nav {
         gap: 30px;
+    }
+    .footer__social {
+        position: relative;
+        right: 10px;
+    }
+}
+@media screen and (max-width: 1014px) {
+    .container {
+        width: 728px;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .header__burger-menu {
+        display: block;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__btn {
+        display: none;
+    }
+    .hero__main-posts {
+        display: block;
+    }
+    .hero__main-post-first {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .hero__main-post-second {
+        width: 100%;
+    }
+    .hero__posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__social {
+        gap: 40px 16px;
+        position: static;
+    }
+    .footer__btn-send {
+        top: 1px;
+    }
+    
+}
+@media screen and (max-width: 755px) {
+    .container {
+        width: 374px;
+        
+    }
+    .hero__btn {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        
+    }
+
+    .hero__btn-item {
+        flex: 0 0 auto;
+    }
+    .hero__main-post-first {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .hero__main-post-second {
+        width: 100%;
+    }
+    .hero__posts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero__post-item:nth-child(n+3) {
+        display: none;
+    }
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+    .footer__btn-send {
+        top: 1px;
+    }
+    .footer {
+        padding: 35px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__social {
+        grid-template-columns: 10% 10% 10% 10%; 
+        gap: 30px 10px;    
+        position: static;
+    }
+    .footer__other {
+     flex-flow: column;   
+     gap: 20px;
+     justify-content: flex-start;
+     align-self: start;
+    }
+}
+@media screen and (max-width: 375px) {
+    .container {
+        width: 320px;
+        
     }
 }
